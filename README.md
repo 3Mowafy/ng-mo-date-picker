@@ -3,8 +3,8 @@
 <div align="center">
 
 ## اختر Readme بالعربي
-[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](./README.md)
-[![العربية](https://img.shields.io/badge/اللغة-العربية-green?style=for-the-badge)](./README.ar.md)
+[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](./projects/ng-mo-date-picker/README.md)
+[![العربية](https://img.shields.io/badge/اللغة-العربية-green?style=for-the-badge)](./projects/ng-mo-date-picker/README.ar.md)
 
 🗓️ **Angular Hijri/Gregorian Date Picker with RTL/LTR support**
 
