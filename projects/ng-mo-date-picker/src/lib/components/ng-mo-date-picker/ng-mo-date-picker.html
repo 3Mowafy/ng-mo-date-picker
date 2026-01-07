@@ -1,0 +1,75 @@
+<div [ngClass]="wrapperCssClasses()" moClickOutside (clickOutside)="onClickOutside()">
+  <div class="mo-input-container">
+    <input type="text" [value]="formattedDate()" (click)="!disabled() && toggleCalendar()" [disabled]="disabled()"
+      [readonly]="readonly()" [placeholder]="placeholderText()" [name]="name()" [id]="id()"
+      [ngClass]="inputCssClasses()" />
+
+    @if (showIcon()) {
+    <button type="button" (click)="!disabled() && toggleCalendar()" [disabled]="disabled()"
+      [ngClass]="iconBtnCssClasses()">
+      {{ customIcon() }}
+    </button>
+    }
+  </div>
+
+  @if (isOpen()) {
+  <div [ngClass]="calendarCssClasses()">
+
+    <div class="mo-toggle-container">
+      <button (click)="setCalendarType('gregorian')" class="mo-toggle-btn"
+        [class.active]="internalCalendarType() === 'gregorian'">
+        {{ translations().gregorian }}
+      </button>
+
+      <button (click)="setCalendarType('hijri')" class="mo-toggle-btn"
+        [class.active]="internalCalendarType() === 'hijri'">
+        {{ translations().hijri }}
+      </button>
+    </div>
+
+    <div class="mo-nav">
+      <button (click)="previousMonth()" class="mo-nav-btn">
+        ‹
+      </button>
+
+      <span class="mo-month-year">
+        {{ monthName() }} {{ currentYearDisplay() }}
+      </span>
+
+      <button (click)="nextMonth()" class="mo-nav-btn">
+        ›
+      </button>
+    </div>
+
+    <div class="mo-days-header">
+      @for (day of daysShortNames(); track $index) {
+      <div class="mo-day-name">{{ day }}</div>
+      }
+    </div>
+
+    <div class="mo-days-grid">
+      @for (day of days(); track $index) {
+      @if (day.isEmpty) {
+      <div class="mo-day empty"></div>
+      } @else {
+      <button (click)="selectDate(day)" class="mo-day" [class.selected]="isSelected(day)"
+        [class.today]="isToday(day) && !isSelected(day)">
+        {{ day.day }}
+      </button>
+      }
+      }
+    </div>
+
+    <div class="mo-footer">
+      <button (click)="selectToday()" class="mo-footer-btn">
+        {{ translations().today }}
+      </button>
+
+      <button (click)="clearDate()" class="mo-footer-btn">
+        {{ translations().clear }}
+      </button>
+    </div>
+
+  </div>
+  }
+</div>

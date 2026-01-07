@@ -1,0 +1,120 @@
+<div class="min-h-screen bg-gray-50 py-12">
+  <div class="container mx-auto px-4">
+
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">ng-mo-date-picker</h1>
+      <p class="text-gray-600 text-lg">Angular Hijri/Gregorian DatePicker with RTL/LTR Support</p>
+      <div class="flex gap-4 justify-center mt-4">
+        <a href="https://github.com/3Mowafy/ng-mo-date-picker" class="text-blue-600 hover:underline">GitHub</a>
+        <a href="https://www.npmjs.com/package/ng-mo-date-picker" class="text-blue-600 hover:underline">npm</a>
+      </div>
+    </div>
+
+    <div class="max-w-lg mx-auto space-y-8">
+
+      <!-- Example 1 -->
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="bg-blue-600 text-white px-6 py-4">
+          <h2 class="text-xl font-bold">Basic - Arabic (RTL)</h2>
+          <p class="text-sm opacity-90 mt-1">Default configuration with Arabic locale</p>
+        </div>
+        <div class="p-6 text-center">
+          <ng-mo-date-picker [locale]="'ar'" (dateChange)="onDateChange($event)" />
+          <pre class="mt-4 bg-gray-100 p-3 rounded text-xs overflow-x-auto">{{ example1 }}</pre>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="bg-green-600 text-white px-6 py-4">
+          <h2 class="text-xl font-bold">English (LTR)</h2>
+          <p class="text-sm opacity-90 mt-1">English locale with LTR support</p>
+        </div>
+        <div class="p-6 text-center">
+          <ng-mo-date-picker [locale]="'en'" [placeholder]="'Select a date'" (dateChange)="onDateChange($event)" />
+          <pre class="mt-4 bg-gray-100 p-3 rounded text-xs overflow-x-auto">{{ example2 }}</pre>
+        </div>
+      </div>
+
+      <!-- Example 3 -->
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="bg-purple-600 text-white px-6 py-4">
+          <h2 class="text-xl font-bold">Hijri Calendar</h2>
+          <p class="text-sm opacity-90 mt-1">Start with Hijri calendar by default</p>
+        </div>
+        <div class="p-6 text-center">
+          <ng-mo-date-picker [locale]="'ar'" [calendarType]="'hijri'" (dateChange)="onDateChange($event)" />
+          <pre class="mt-4 bg-gray-100 p-3 rounded text-xs overflow-x-auto">{{ example3 }}</pre>
+        </div>
+      </div>
+
+      <!-- Example 4 -->
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="bg-orange-600 text-white px-6 py-4">
+          <h2 class="text-xl font-bold">Custom Icon</h2>
+          <p class="text-sm opacity-90 mt-1">Use custom icon or hide it</p>
+        </div>
+        <div class="p-6 space-y-4 text-center">
+          <div>
+            <p class="text-sm text-gray-600 mb-2">With custom icon:</p>
+            <ng-mo-date-picker [locale]="'en'" [customIcon]="'🗓️'" />
+          </div>
+          <div>
+            <p class="text-sm text-gray-600 mb-2">Without icon:</p>
+            <ng-mo-date-picker [locale]="'en'" [showIcon]="false" />
+          </div>
+          <pre class="bg-gray-100 p-3 rounded text-xs overflow-x-auto">{{ example4 }}</pre>
+        </div>
+      </div>
+
+      <!-- Example 5 -->
+      <div class="bg-white rounded-lg shadow-lg">
+        <div class="bg-gray-600 text-white px-6 py-4">
+          <h2 class="text-xl font-bold">Disabled State</h2>
+          <p class="text-sm opacity-90 mt-1">Disabled datepicker</p>
+        </div>
+        <div class="p-6 text-center">
+          <ng-mo-date-picker [locale]="'en'" [disabled]="true" />
+          <pre class="mt-4 bg-gray-100 p-3 rounded text-xs overflow-x-auto">{{ example5 }}</pre>
+        </div>
+      </div>
+
+      <!-- Output Display -->
+      @if (selectedDateInfo()) {
+      <div class="bg-linear-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg ">
+        <div class="text-white px-6 py-4">
+          <h3 class="text-xl font-bold">Selected Date Output</h3>
+        </div>
+        <div class="bg-white p-6">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-600 mb-1">Gregorian:</p>
+              <p class="text-lg">{{ selectedDateInfo()?.gregorianFormatted }}</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-600 mb-1">Hijri:</p>
+              <p class="text-lg">{{ selectedDateInfo()?.hijriFormatted }}</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-600 mb-1">Month Name:</p>
+              <p class="text-lg">{{ selectedDateInfo()?.hijriDate?.monthName }}</p>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-gray-600 mb-1">Calendar Type:</p>
+              <p class="text-lg capitalize">{{ selectedDateInfo()?.calendarType }}</p>
+            </div>
+          </div>
+          <pre class="mt-4 bg-gray-100 p-4 rounded text-xs overflow-x-auto">{{ selectedDateInfo() | json }}</pre>
+        </div>
+      </div>
+      }
+
+    </div>
+
+    <div class="text-center mt-12 text-gray-600">
+      <p>Made with ❤️ by Mohamed Mowafy</p>
+      <p class="text-sm mt-2">MIT License</p>
+    </div>
+
+  </div>
+</div>
