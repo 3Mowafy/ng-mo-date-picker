@@ -3,8 +3,8 @@
 <div align="center">
 
 ## اختر Readme بالعربي
-[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](./projects/ng-mo-date-picker/README.md)
-[![العربية](https://img.shields.io/badge/اللغة-العربية-green?style=for-the-badge)](./projects/ng-mo-date-picker/README.ar.md)
+[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](./README.md)
+[![العربية](https://img.shields.io/badge/اللغة-العربية-green?style=for-the-badge)](./README.ar.md)
 
 🗓️ **Angular Hijri/Gregorian Date Picker with RTL/LTR support**
 
@@ -12,7 +12,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/ng-mo-date-picker.svg)](https://www.npmjs.com/package/ng-mo-date-picker)
 
-[Demo](https://3mowafy.github.io/ng-mo-date-picker/) • [Documentation](#-api-reference) • [Examples](#-usage-examples)
+[Demo](https://ng-mo-datepicker.netlify.app/) • [Documentation](#api-reference) • [Examples](#-usage-examples)
 
 </div>
 ## ✨ Features
@@ -291,7 +291,7 @@ MIT © [Mohamed Mowafy](https://github.com/3Mowafy)
 - [GitHub Repository](https://github.com/3Mowafy/ng-mo-date-picker)
 - [npm Package](https://www.npmjs.com/package/ng-mo-date-picker)
 - [Issues](https://github.com/3Mowafy/ng-mo-date-picker/issues)
-- [Demo](https://github.com/3Mowafy/ng-mo-date-picker#demo) *(coming soon)*
+- [Demo](https://ng-mo-datepicker.netlify.app/)
 
 ## 🙏 Acknowledgments
 
