@@ -1,7 +1,8 @@
-# ng-mo-date-picker
+# Ng-Mo-date-picker
 
 <div align="center">
 
+## اختر Readme بالعربي
 [![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](./README.md)
 [![العربية](https://img.shields.io/badge/اللغة-العربية-green?style=for-the-badge)](./README.ar.md)
 
