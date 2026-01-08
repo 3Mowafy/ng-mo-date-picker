@@ -214,9 +214,6 @@
     font-weight: 600;
 }
 
-.mo-day.empty {
-    display: none;
-}
 
 .mo-footer {
     display: flex;
@@ -242,6 +239,10 @@
     background: #f9fafb;
     border-color: #3b82f6;
     color: #3b82f6;
+}
+
+.mo-datepicker-wrapper.mo-fluid {
+    max-width: 100%;
 }
 
 

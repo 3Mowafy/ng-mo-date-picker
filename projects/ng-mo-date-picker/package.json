@@ -1,6 +1,6 @@
 {
   "name": "ng-mo-date-picker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Angular Hijri/Gregorian Date Picker with RTL/LTR support",
   "demo": "https://ng-mo-datepicker.netlify.app/",
   "repository": {

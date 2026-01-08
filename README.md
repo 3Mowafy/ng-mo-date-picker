@@ -11,8 +11,9 @@
 [![npm version](https://badge.fury.io/js/ng-mo-date-picker.svg)](https://www.npmjs.com/package/ng-mo-date-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/ng-mo-date-picker.svg)](https://www.npmjs.com/package/ng-mo-date-picker)
+[![Latest Release](https://img.shields.io/github/v/release/3Mowafy/ng-mo-date-picker?label=Latest&color=success)](https://github.com/3Mowafy/ng-mo-date-picker/releases)
 
-[Demo](https://ng-mo-datepicker.netlify.app/) • [Documentation](#api-reference) • [Examples](#-usage-examples)
+[Demo](https://3mowafy.github.io/ng-mo-date-picker/) • [Documentation](#-api-reference) • [Examples](#-usage-examples)
 
 </div>
 ## ✨ Features
@@ -26,6 +27,8 @@
 - ✅ **Customizable**: Custom icons, styles, and behavior
 - ✅ **TypeScript**: Fully typed with excellent IntelliSense support
 - ✅ **Rich Output**: Get both Gregorian and Hijri dates with full formatting
+
+
 
 ## 📦 Installation
 ```bash
@@ -156,6 +159,7 @@ export class MyComponent {
 | `placeholder` | `string` | Auto (based on locale) | Custom placeholder text |
 | `name` | `string` | `undefined` | Input name attribute |
 | `id` | `string` | `undefined` | Input id attribute |
+| `fluid` | `boolean` | `false` | Make datepicker full width |
 
 ### Outputs
 
@@ -267,6 +271,11 @@ onDateChange(output: DatePickerOutput | null) {
 - Safari (latest)
 - Edge (latest)
 
+
+## 📋 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for a detailed release history.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -291,7 +300,7 @@ MIT © [Mohamed Mowafy](https://github.com/3Mowafy)
 - [GitHub Repository](https://github.com/3Mowafy/ng-mo-date-picker)
 - [npm Package](https://www.npmjs.com/package/ng-mo-date-picker)
 - [Issues](https://github.com/3Mowafy/ng-mo-date-picker/issues)
-- [Demo](https://ng-mo-datepicker.netlify.app/)
+- [Demo](https://github.com/3Mowafy/ng-mo-date-picker#demo) *(coming soon)*
 
 ## 🙏 Acknowledgments
 

@@ -11,7 +11,7 @@
 [![npm version](https://badge.fury.io/js/ng-mo-date-picker.svg)](https://www.npmjs.com/package/ng-mo-date-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[🎮 معاينة مباشرة](https://ng-mo-datepicker.netlify.app/) • [📖 التوثيق](#المدخلات-والمخرجات) • [💡 الأمثلة](#-أمثلة-الاستخدام)
+[🎮 معاينة مباشرة](https://3mowafy.github.io/ng-mo-date-picker/) • [📖 التوثيق](#-المدخلات-والمخرجات) • [💡 الأمثلة](#-أمثلة-الاستخدام)
 
 </div>
 
@@ -24,7 +24,7 @@
 - ✅ **دعم الاتجاه التلقائي**: تبديل تلقائي بين RTL و LTR
 - ✅ **متوافق مع النماذج**: يعمل مع Reactive Forms و Template-driven Forms و Signal Forms
 - ✅ **خفيف وسريع**: حجم صغير (~50KB) مع الاعتماديات
-- ✅ **مكون مستقل**: لا يحتاج استيراد modules (Angular 21+)
+- ✅ **مكون مستقل**: لا يحتاج استيراد modules (Angular 21+) 
 - ✅ **قابل للتخصيص**: تخصيص كامل للأيقونات والألوان والأنماط
 - ✅ **مكتوب بـ TypeScript**: دعم كامل لـ IntelliSense
 - ✅ **إخراج شامل**: الحصول على التاريخ الميلادي والهجري معاً مع التنسيق الكامل
@@ -77,7 +77,7 @@ export class AppComponent {
 ```html
 <ng-mo-date-picker 
   [locale]="'en'"
-  [placeholder]="'اختر تاريخاً'"
+  [placeholder]="'Pick a date'"
 />
 ```
 
@@ -176,7 +176,7 @@ export class MyComponent {
 | `placeholder` | `string` | تلقائي حسب اللغة | النص التوضيحي |
 | `name` | `string` | `undefined` | اسم الحقل (name attribute) |
 | `id` | `string` | `undefined` | معرّف الحقل (id attribute) |
-
+| `fluid` | `boolean` | `false` | جعل المكون بعرض كامل |
 ### المخرجات (Outputs)
 
 | الاسم | النوع | الوصف |
@@ -306,6 +306,10 @@ onDateChange(output: DatePickerOutput | null) {
 - Safari (آخر إصدار)
 - Edge (آخر إصدار)
 
+## 📋 سجل التحديثات
+
+راجع [CHANGELOG.md](./CHANGELOG.md) لمعرفة تاريخ الإصدارات بالتفصيل.
+
 ## 🤝 المساهمة
 
 المساهمات مرحب بها دائماً! لا تتردد في:
@@ -329,7 +333,7 @@ MIT © [Mohamed Mowafy](https://github.com/3Mowafy)
 
 - [📦 الحزمة على npm](https://www.npmjs.com/package/ng-mo-date-picker)
 - [💻 المستودع على GitHub](https://github.com/3Mowafy/ng-mo-date-picker)
-- [🎮 معاينة مباشرة](https://ng-mo-datepicker.netlify.app/)
+- [🎮 معاينة مباشرة](https://3mowafy.github.io/ng-mo-date-picker/)
 - [🐛 الإبلاغ عن مشكلة](https://github.com/3Mowafy/ng-mo-date-picker/issues)
 - [📖 التوثيق الكامل](https://github.com/3Mowafy/ng-mo-date-picker#readme)
 

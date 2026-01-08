@@ -16,19 +16,19 @@
   <div [ngClass]="calendarCssClasses()">
 
     <div class="mo-toggle-container">
-      <button (click)="setCalendarType('gregorian')" class="mo-toggle-btn"
+      <button type="button" (click)="setCalendarType('gregorian')" class="mo-toggle-btn"
         [class.active]="internalCalendarType() === 'gregorian'">
         {{ translations().gregorian }}
       </button>
 
-      <button (click)="setCalendarType('hijri')" class="mo-toggle-btn"
+      <button type="button" (click)="setCalendarType('hijri')" class="mo-toggle-btn"
         [class.active]="internalCalendarType() === 'hijri'">
         {{ translations().hijri }}
       </button>
     </div>
 
     <div class="mo-nav">
-      <button (click)="previousMonth()" class="mo-nav-btn">
+      <button type="button" (click)="previousMonth()" class="mo-nav-btn">
         ‹
       </button>
 
@@ -36,7 +36,7 @@
         {{ monthName() }} {{ currentYearDisplay() }}
       </span>
 
-      <button (click)="nextMonth()" class="mo-nav-btn">
+      <button type="button" (click)="nextMonth()" class="mo-nav-btn">
         ›
       </button>
     </div>
@@ -49,23 +49,21 @@
 
     <div class="mo-days-grid">
       @for (day of days(); track $index) {
-      @if (day.isEmpty) {
-      <div class="mo-day empty"></div>
-      } @else {
-      <button (click)="selectDate(day)" class="mo-day" [class.selected]="isSelected(day)"
+
+      <button type="button" (click)="selectDate(day)" class="mo-day" [class.selected]="isSelected(day)"
         [class.today]="isToday(day) && !isSelected(day)">
         {{ day.day }}
       </button>
-      }
+
       }
     </div>
 
     <div class="mo-footer">
-      <button (click)="selectToday()" class="mo-footer-btn">
+      <button type="button" (click)="selectToday()" class="mo-footer-btn">
         {{ translations().today }}
       </button>
 
-      <button (click)="clearDate()" class="mo-footer-btn">
+      <button type="button" (click)="clearDate()" class="mo-footer-btn">
         {{ translations().clear }}
       </button>
     </div>

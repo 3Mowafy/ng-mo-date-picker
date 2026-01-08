@@ -11,6 +11,7 @@
 [![npm version](https://badge.fury.io/js/ng-mo-date-picker.svg)](https://www.npmjs.com/package/ng-mo-date-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/ng-mo-date-picker.svg)](https://www.npmjs.com/package/ng-mo-date-picker)
+[![Latest Release](https://img.shields.io/github/v/release/3Mowafy/ng-mo-date-picker?label=Latest&color=success)](https://github.com/3Mowafy/ng-mo-date-picker/releases)
 
 [Demo](https://3mowafy.github.io/ng-mo-date-picker/) • [Documentation](#-api-reference) • [Examples](#-usage-examples)
 
@@ -26,6 +27,8 @@
 - ✅ **Customizable**: Custom icons, styles, and behavior
 - ✅ **TypeScript**: Fully typed with excellent IntelliSense support
 - ✅ **Rich Output**: Get both Gregorian and Hijri dates with full formatting
+
+
 
 ## 📦 Installation
 ```bash
@@ -156,6 +159,7 @@ export class MyComponent {
 | `placeholder` | `string` | Auto (based on locale) | Custom placeholder text |
 | `name` | `string` | `undefined` | Input name attribute |
 | `id` | `string` | `undefined` | Input id attribute |
+| `fluid` | `boolean` | `false` | Make datepicker full width |
 
 ### Outputs
 
@@ -266,6 +270,11 @@ onDateChange(output: DatePickerOutput | null) {
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
+
+
+## 📋 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for a detailed release history.
 
 ## 🤝 Contributing
 

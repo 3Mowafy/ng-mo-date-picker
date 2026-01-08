@@ -35,6 +35,7 @@ export class NgMoDatePicker {
   placeholder = input<string | undefined>(undefined);
   name = input<string | undefined>(undefined);
   id = input<string | undefined>(undefined);
+  fluid = input<boolean>(false);
 
   // ==================== OUTPUTS ====================
   dateChange = output<DatePickerOutput | null>();
@@ -98,6 +99,7 @@ export class NgMoDatePicker {
   // CSS Classes Computed Signals
   wrapperCssClasses = computed(() => ({
     'mo-datepicker-wrapper': true,
+    'mo-fluid': this.fluid(),
     'rtl': this.locale() === 'ar',
     'ltr': this.locale() === 'en'
   }));
@@ -206,17 +208,9 @@ export class NgMoDatePicker {
       })
     );
 
-    const totalUsedDays = emptyDays.length + monthDays.length;
-    const remainingDays = Array.from(
-      { length: 42 - totalUsedDays },
-      () => ({
-        date: null,
-        day: null,
-        isEmpty: true
-      })
-    );
 
-    this.days.set([...emptyDays, ...monthDays, ...remainingDays]);
+
+    this.days.set([...emptyDays, ...monthDays]);
   }
 
   private generateHijriCalendar() {
@@ -250,17 +244,9 @@ export class NgMoDatePicker {
       }
     );
 
-    const totalUsedDays = emptyDays.length + monthDays.length;
-    const remainingDays = Array.from(
-      { length: 42 - totalUsedDays },
-      () => ({
-        date: null,
-        day: null,
-        isEmpty: true
-      })
-    );
 
-    this.days.set([...emptyDays, ...monthDays, ...remainingDays]);
+
+    this.days.set([...emptyDays, ...monthDays]);
   }
 
   // ==================== NAVIGATION ====================

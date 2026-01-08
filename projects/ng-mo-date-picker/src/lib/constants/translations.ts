@@ -16,7 +16,7 @@ export const TRANSLATIONS = {
             'July', 'August', 'September', 'October', 'November', 'December'],
         hijriMonths: ['Muharram', 'Safar', 'Rabi al-Awwal', 'Rabi al-Thani', 'Jumada al-Awwal',
             'Jumada al-Thani', 'Rajab', 'Shaban', 'Ramadan', 'Shawwal', 'Dhu al-Qadah', 'Dhu al-Hijjah'],
-        days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+        days: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
         today: 'Today',
         clear: 'Clear',
         gregorian: 'Gregorian',
